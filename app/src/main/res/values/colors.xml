@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#009688</color>
+    <color name="colorAccent">#5677fc</color>
+
+    <!-- primitive color -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#282828</color>
+    <color name="light">#787878</color>
+    <color name="light_blue">#005092</color>
+    <color name="content_at_friends_color">#0e488a</color>
+    <color name="transparent_black">#33000000</color>
+    <color name="transparent_black_30_percent">#4C000000</color>
+    <color name="transparent_dark_black">#CC000000</color>
+    <color name="transparent_half_black">#88000000</color>
+    <color name="transparent_black_5_percent">#0D000000</color>
+    <color name="transparent_black_60_percent">#88000000</color>
+    <color name="transparent_black_70_percent">#b3000000</color>
+    <color name="transparent_white">#20ffffff</color>
+    <color name="transparent_white_80_percent">#cdffffff</color>
+    <color name="transparent_white_90_percent">#e5ffffff</color>
+    <color name="transparent_white_40_percent">#66ffffff</color>
+    <color name="transparent_half_white">#99F1F4F8</color>
+    <color name="transparent_titlebar_default">#20000000</color>
+    <color name="transparent_titlebar_pressed">#33000000</color>
+    <color name="photos_name_background">#80000000</color>
+    <color name="feed_photo_background">#fff0f0f0</color>
+
+
+    <!-- 20%透明的白色 -->
+    <color name="voip_twenty_percent_alpha_white">#33ffffff</color>
+
+    <!-- 10%黑 -->
+    <color name="profile_fouty_percent_alpha_black">#66000000</color>
+
+</resources>
