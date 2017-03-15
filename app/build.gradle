@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.chris.mystudy"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -17,43 +17,45 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    productFlavors {
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    compile 'com.android.support:design:25.2.0'
-    testCompile 'junit:junit:4.12'
-
-
-
-
     //加载leakcanary
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
     //加载butterknife
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     //加载okhttp3
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     //加载RxJava,RxAndroid
+    // retrofit
+    // logger
+    // circleimageview
+    // recyclerview-animators
+    // photoview
+    //百分比布局
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile 'com.jakewharton:butterknife:8.5.1'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'io.reactivex:rxjava:1.1.9'
     compile 'io.reactivex:rxandroid:1.2.1'
-    // retrofit
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    // logger
     compile 'com.orhanobut:logger:1.15'
-    // circleimageview
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    // recyclerview-animators
     compile 'jp.wasabeef:recyclerview-animators:2.2.3'
-    // photoview
     compile 'com.github.chrisbanes.photoview:library:1.2.4'
-    //百分比布局
     compile 'com.zhy:percent-support-extends:1.0.1'
+    compile 'com.android.support:support-v4:25.2.0'
+    compile 'com.google.android.gms:play-services:10.2.0'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //cardview
+    compile 'com.android.support:cardview-v7:25.0.+'
 }

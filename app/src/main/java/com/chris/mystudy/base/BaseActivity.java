@@ -25,17 +25,18 @@ public abstract class BaseActivity<T extends IBasePresenter> extends AppCompatAc
     //子类需要传进来的layoutID
     public abstract int setContentId();
 
+    //子类需要实现
+    public abstract void initView();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //requestFeature() must be called before adding content
         setContentView(setContentId());
         ButterKnife.bind(this);
-        setStatusBar(!showNavagationBar());
-        if (setToolbar() == null){
-            //TODO:处理不显示ActionBar的情况
-        }else {
-            setSupportActionBar(setToolbar());
-        }
+//        setStatusBar(!showNavagationBar());
+        setToolbar();
+        initView();
 
     }
 

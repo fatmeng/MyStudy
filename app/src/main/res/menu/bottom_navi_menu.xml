@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="首页"
+          android:id="@+id/home_menu"
+          android:icon="@android:drawable/ic_menu_myplaces"
+          android:showAsAction="never"
+          android:checkable="false"/>
+    <item android:title="浏览"
+          android:id="@+id/look_menu"
+          android:icon="@android:drawable/ic_menu_gallery"
+          android:showAsAction="never"
+        />
+    <item android:title="我的"
+          android:id="@+id/myself_menu"
+          android:icon="@android:drawable/sym_def_app_icon"
+          android:showAsAction="never"/>
+</menu>
