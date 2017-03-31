@@ -40,6 +40,7 @@ public class DetailActivity extends BaseActivity {
     @Override
     public int setContentId() {
         return R.layout.activity_detail;
+
     }
 
     @Override

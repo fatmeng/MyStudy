@@ -1,5 +1,7 @@
 package com.chris.mystudy;
 
+import android.content.Intent;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.Snackbar;
@@ -14,7 +16,9 @@ import android.widget.Toast;
 import com.chris.mystudy.adapater.ViewPagerAdapter;
 import com.chris.mystudy.base.BaseActivity;
 import com.chris.mystudy.commonutils.SnackbarUtils;
+import com.chris.mystudy.customview.CustomViewFragment;
 import com.chris.mystudy.home.HomeFragment;
+import com.chris.mystudy.login.LoginActivity;
 
 import butterknife.BindView;
 
@@ -45,10 +49,15 @@ public class MainActivity extends BaseActivity{
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.action_search:
+                        //调起Android使用记录访问权限的申请界面
+                        Intent intent = new Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS);
+                        startActivity(intent);
                         break;
                     case R.id.action_notification:
                         break;
                     case R.id.action_login:
+                        LoginActivity.actionStart(MainActivity.this);
+                        overridePendingTransition(R.anim.act_right_enter,R.anim.act_left_exit);
                         break;
                     case R.id.action_share:
                         break;
@@ -74,8 +83,8 @@ public class MainActivity extends BaseActivity{
 
     private void initViewPager() {
         ViewPagerAdapter adpter = new ViewPagerAdapter(getSupportFragmentManager());
-        adpter.addFragment(HomeFragment.newInstance("首页"));
-        adpter.addFragment(HomeFragment.newInstance("浏览"));
+        adpter.addFragment(HomeFragment.newInstance("RecycleView"));
+        adpter.addFragment(CustomViewFragment.newInstance("CustomView"));
         adpter.addFragment(HomeFragment.newInstance("我的"));
         mViewPager.setAdapter(adpter);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {

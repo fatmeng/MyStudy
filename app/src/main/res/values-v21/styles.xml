@@ -9,6 +9,7 @@
 
     <style name="FullTheme" parent="AppTheme">
         <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/transparent</item>
     </style>
 
     <style name="MyPopupToolbarTheme" parent="ThemeOverlay.AppCompat.Light">

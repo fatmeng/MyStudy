@@ -28,4 +28,10 @@
     </style>
 
     <style name="MyPopupToolbarTheme"></style>
+
+    <style name="EditCircleDefaultTheme" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/login_type_bg</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_margin">@dimen/editview_gap_defalut</item>
+    </style>
 </resources>

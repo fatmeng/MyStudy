@@ -3,8 +3,8 @@ package com.chris.mystudy.commonutils;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
+import android.util.TypedValue;
 import android.view.View;
-import android.view.Window;
 
 import java.lang.reflect.Field;
 
@@ -59,5 +59,17 @@ public class UIUtils {
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
     }
+
+    /**
+     * @param mContext
+     * @param src 输入需要转换为px的sp值
+     * @return 返回对应src的px值
+     */
+    public static float dp2px(Context mContext,int src){
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,src, mContext.getResources().getDisplayMetrics());
+    }
+
+
+
 
 }

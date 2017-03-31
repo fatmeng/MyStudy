@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
           package="com.chris.mystudy">
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 增加Android使用记录访问权限 -->
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions"/>
 
     <application
+        android:name=".StudyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -27,6 +33,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".login.LoginActivity"
+            android:theme="@style/FullTheme">
+        </activity>
+        <activity android:name=".customview.CustomActivity"></activity>
     </application>
 
 </manifest>

@@ -21,3 +21,6 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    support = "25.0.1"
+}

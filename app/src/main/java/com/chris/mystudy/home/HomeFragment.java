@@ -6,7 +6,6 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.chris.mystudy.DetailActivity;
@@ -31,7 +30,6 @@ public class HomeFragment extends BaseFragment implements RecyclerAdapterForNews
 
 
     @BindView(R.id.coordinator_layout)CoordinatorLayout mCoordinatorLayout;
-    @BindView(R.id.tool_bar)Toolbar mToolbar;
     @BindView(R.id.recycler_view)RecyclerView mRecyclerView;
 
     public static HomeFragment newInstance(String title) {
