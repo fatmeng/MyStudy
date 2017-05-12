@@ -54,7 +54,7 @@ public class DetailActivity extends BaseActivity {
     }
 
     @Override
-    public boolean showNavagationBar() {
+    public boolean showNavigationBar() {
         return false;
     }
 }

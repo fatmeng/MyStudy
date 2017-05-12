@@ -3,6 +3,7 @@ package com.chris.mystudy;
 import android.content.Intent;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +20,7 @@ import com.chris.mystudy.commonutils.SnackbarUtils;
 import com.chris.mystudy.customview.CustomViewFragment;
 import com.chris.mystudy.home.HomeFragment;
 import com.chris.mystudy.login.LoginActivity;
+import com.chris.mystudy.myself.MySelfFragment;
 
 import butterknife.BindView;
 
@@ -85,7 +87,7 @@ public class MainActivity extends BaseActivity{
         ViewPagerAdapter adpter = new ViewPagerAdapter(getSupportFragmentManager());
         adpter.addFragment(HomeFragment.newInstance("RecycleView"));
         adpter.addFragment(CustomViewFragment.newInstance("CustomView"));
-        adpter.addFragment(HomeFragment.newInstance("我的"));
+        adpter.addFragment(MySelfFragment.newInstance("我的"));
         mViewPager.setAdapter(adpter);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -94,7 +96,7 @@ public class MainActivity extends BaseActivity{
             }
 
             @Override
-            public void onPageSelected(int position) {
+            public void onPageSelected(@StringRes  int position) {
                 mBottomNavigationView.getMenu().getItem(position).setChecked(true);
             }
 
@@ -139,7 +141,7 @@ public class MainActivity extends BaseActivity{
     }
 
     @Override
-    public boolean showNavagationBar() {
+    public boolean showNavigationBar() {
         return false;
     }
 

@@ -6,32 +6,37 @@
 
 
     <Button
-        android:text="华为关机充电"
+        android:text="仿华为闹钟呼吸效果"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/huawei_poweroff_charging"/>
 
     <Button
-        android:text="Button"
+        android:text="Radar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button3"/>
+        android:id="@+id/radar_view"/>
 
     <Button
-        android:text="Button"
+        android:text="ShadowView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button4"/>
+        android:id="@+id/shadow_view"/>
 
     <Button
-        android:text="Button"
+        android:text="GaussianView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button5"/>
+        android:id="@+id/gaussian"/>
 
-    <ToggleButton
-        android:text="ToggleButton"
+    <Button
+        android:text="TouchCircleView"
+        android:id="@+id/touch_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:text="玩游戏"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toggleButton"/>
+        android:id="@+id/playGame"/>
 </LinearLayout>

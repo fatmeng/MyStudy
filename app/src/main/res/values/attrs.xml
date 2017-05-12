@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HuaWeiAlarmClockView">
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="shaderStartColor" format="color"></attr>
+        <attr name="shaderEndColor" format="color"></attr>
+        <attr name="centerColor" format="color"></attr>
+        <attr name="text" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="RadarView">
+        <attr name="circle_num" format="integer"></attr>
+        <attr name="startColor" format="color"></attr>
+        <attr name="endColor" format="color"></attr>
+        <attr name="bgColor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="ShadowView">
+        <attr name="src" format="reference"></attr>
+    </declare-styleable>
+    <declare-styleable name="TouchCilrView">
+        <attr name="circleRadius" format="dimension"></attr>
+        <attr name="bgSrc" format="reference"></attr>
+    </declare-styleable>
+</resources>

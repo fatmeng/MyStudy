@@ -1,6 +1,5 @@
 package com.chris.mystudy.customview;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,10 +16,20 @@ import butterknife.BindView;
  * Detail :
  */
 
-public class CustomViewFragment extends BaseFragment {
+public class CustomViewFragment extends BaseFragment implements View.OnClickListener{
 
     @BindView(R.id.huawei_poweroff_charging)
-    Button huaweiCharing;
+    Button huaweiCharingButtom;
+    @BindView(R.id.radar_view)
+    Button radarButton;
+    @BindView(R.id.shadow_view)
+    Button shadowButton;
+    @BindView(R.id.gaussian)
+    Button gaussianButton;
+    @BindView(R.id.touch_view)
+    Button touchCircleButton;
+    @BindView(R.id.playGame)
+    Button palyGameButton;
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.fragment_custom_layout;
@@ -29,14 +38,12 @@ public class CustomViewFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        huaweiCharing.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext,CustomActivity.class);
-                mContext.startActivity(intent);
-                getActivity().overridePendingTransition(R.anim.act_right_enter,R.anim.act_left_exit);
-            }
-        });
+        huaweiCharingButtom.setOnClickListener(this);
+        radarButton.setOnClickListener(this);
+        shadowButton.setOnClickListener(this);
+        gaussianButton.setOnClickListener(this);
+        touchCircleButton.setOnClickListener(this);
+        palyGameButton.setOnClickListener(this);
     }
 
     @Override
@@ -51,5 +58,31 @@ public class CustomViewFragment extends BaseFragment {
         CustomViewFragment fragment = new CustomViewFragment();
         fragment.setArguments(args);
         return fragment;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.huawei_poweroff_charging:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_huawei_layout);
+                break;
+            case R.id.radar_view:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_radar_layout);
+                break;
+            case R.id.shadow_view:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_shadow_layout);
+                break;
+            case R.id.gaussian:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_gaussian_layout,R.id.view);
+                break;
+            case R.id.touch_view:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_touchcircleview_layout);
+                break;
+            case R.id.playGame:
+                CustomActivity.startAction(getActivity(),R.layout.activity_custom_game_layout);
+                break;
+            default:
+                break;
+        }
     }
 }

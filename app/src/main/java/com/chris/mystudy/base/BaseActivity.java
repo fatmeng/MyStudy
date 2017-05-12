@@ -9,9 +9,10 @@ import butterknife.ButterKnife;
 public abstract class BaseActivity<T extends IBasePresenter> extends AppCompatActivity {
 
     //需要展示的Activity是否需要显示NavigationStatus
-    private boolean isShowNavagationBar = false;
-    public boolean showNavagationBar(){
-        return isShowNavagationBar;
+
+    private boolean isShowNavigationBar = false;
+    public boolean showNavigationBar(){
+        return isShowNavigationBar;
     }
 
     //需要子类实现的类,传进来Toolbar
@@ -26,12 +27,15 @@ public abstract class BaseActivity<T extends IBasePresenter> extends AppCompatAc
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //requestFeature() must be called before adding content
         setContentView(setContentId());
         ButterKnife.bind(this);
-//        setStatusBar(!showNavagationBar());
+        setNavigationBarShow(!showNavigationBar());
         setToolbar();
         initView();
+
+    }
+
+    private void setNavigationBarShow(boolean flag) {
 
     }
 

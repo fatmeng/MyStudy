@@ -34,4 +34,7 @@
         <item name="android:maxLines">1</item>
         <item name="android:layout_margin">@dimen/editview_gap_defalut</item>
     </style>
+    <style name="SwipeBackTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 </resources>

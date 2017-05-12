@@ -287,4 +287,26 @@ public class ExampleUnitTest {
         Runtime.getRuntime().availableProcessors();
     }
 
+    @Test
+    public void testC(){
+        int a = 10;
+        int b = 30;
+        System.out.println((a+b)>>1);
+
+        int x = 153;
+        int y = 50;
+        System.out.println(x&y);
+
+    }
+
+    @Test
+    public void testBuffer(){
+        int REPLACEMENT_CHARACTER = '\ufffd';
+        System.out.println("--------result-------");
+        System.out.println(REPLACEMENT_CHARACTER);
+        System.out.println(new String(new char[]{(char) REPLACEMENT_CHARACTER}));
+        System.out.println((char) REPLACEMENT_CHARACTER);
+        System.out.println("-----------------------");
+    }
+
 }

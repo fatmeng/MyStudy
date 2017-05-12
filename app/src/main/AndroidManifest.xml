@@ -36,7 +36,12 @@
         <activity android:name=".login.LoginActivity"
             android:theme="@style/FullTheme">
         </activity>
-        <activity android:name=".customview.CustomActivity"></activity>
+        <activity android:name=".customview.CustomActivity"
+                  android:launchMode="singleTask"
+            android:theme="@style/SwipeBackTheme"></activity>
+        <service android:name=".service.JobAwakenService"
+                 android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name=".service.MessageService"/>
     </application>
 
 </manifest>
